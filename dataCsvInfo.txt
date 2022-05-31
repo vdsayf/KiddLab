@@ -1,0 +1,45 @@
+This is the readme for:
+"data.csv" in RankingBored
+
+
+In data.csv
+each column is as follows:
+
+ID: the ranker's ID
+wholeTime: Time spent on task
+condition: 0 is animal, 1 is invisible
+passTest: whether preRank was passed
+gender: gender
+age: age
+race: race from given options
+racetext: self-fill-in "other" race option
+ethnicity: Hispanic or Not Hispanic
+language: language spoken
+languagetext: self-fill-in "other" language option
+fluenttwo: If you are fluent in two languages
+samp1.id: ID of the judged response #1
+rate1: rating given among 5 answers for samp1.id
+samp2.id: The same as samp1./id
+rate2: same as rate1
+samp3.id
+rate3
+samp4.id
+rate4
+samp5.id
+rate5
+
+!!!IMPORTANT!!!IMPORTANT!!!
+_________________
+This is 21 columns. 
+But if you look at the number of columns in the entries in data.csv each has 25 columns. 
+
+1. "condition" is missing from these entries. You can tell the condition if after samp1.id comes a None then a number OR a number then a None.
+
+If None comes in a column BEFORE the rating, that means animal responses WERE NOT rated. Invisible responses were rated. The entry's condition is 1.
+If None comes in a column AFTER, that means Invisible responses were not rated. Animal responses were rated. The entry's condition is 0.
+
+2. The 5 "None"s should have been removed from these entries. I realized there was a way to condense the entries we receive without them but the previous data needs to be reformatted. Future runs will follow the 21 column format above.
+_______________________
+
+
+

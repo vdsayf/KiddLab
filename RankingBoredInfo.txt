@@ -1,0 +1,75 @@
+This is the readme for RankingBored
+________________________________________________________________________________________________
+Brief legend for FOLDERS/FILES in
+RankingBored
+
+-->RankingBored
+	config.txt = mTurk serever config file
+	SQLtoCSV.py = extracts data and reshapes into a csv
+	data.csv = the data from this experiment (with the response and ratings each ID has given) 
+
+	-->templates
+		base.csv = data from BoredEngaged, all user IDs and responses
+		counts.csv = amounts each response was counted (Number, ID, aniResp, invResp, animalFreq, invFreq) basically base.csv with counts
+
+		introScreen.html = an introduction page
+		demographics.html = demographics page for filling out demographics answers
+		preRank.html = html for practice round before actual ranking
+		ranking.html = html where they will rank responses
+
+	-->static
+		-->js
+			task.js = main experiment file
+
+______________________________________________________________________________________
+RankingBored Task.js functions, classes and variables explanation
+
+data: counts.csv in a 2d array
+
+class Samp: class used within task.js for setting up experiment
+
+shuffleArray: shuffles an array
+
+ansArray: array of strings for setup
+rankArray: array of strings for setup
+
+introScreen:
+	shows introScreen.html
+	shuffles data 
+	comparingColumn: sort function sorting by least number in given Frequency column (condition + 4 is either aniFreq or invFreq)
+	samp1, samp2, ... ,samp5: the responses to be rated
+
+preRank:
+	shows PreRank.html
+	for ranking practice answers
+	if cat answer or spider answer gets higher ranking, it will count to not pass
+
+rankAns:
+	shows ranking.html
+	changes html to display the responses to be ranked
+
+checkErr:
+	checks if every ranking is 1-5 and checks if every rank is different
+
+recordTrialData variables:
+	wholeTime: Time spent on task
+	condition: 0 is animal, 1 is invisible
+	passTest: whether preRank was passed
+	gender: gender
+	age: age
+	race: race from given options
+	racetext: self-fill-in "other" race option
+	ethnicity: Hispanic or Not Hispanic
+	language: language spoken
+	languagetext: self-fill-in "other" language option
+	fluenttwo: If you are fluent in two languages
+
+	samp1.id: ID of the judged response #1
+	rate1: rating given among 5 answers
+
+url: "counts.csv"
+	This line is SPECIFICALLY for
+	data = $.csv.toArrays(file_content);
+	counts.csv is turned into 2d array for the task
+		
+

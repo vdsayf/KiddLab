@@ -1,0 +1,61 @@
+<div align = "center">
+  <br>
+  <div id = "aniPrompt">
+  The left column in the table below has responses to the following question:
+  <br><br>
+  <b>"Imagine an animal that doesn't exist, that no one else has ever imagined before. What does the animal look like?"</b>
+  <br><br>
+  In the right column, please rank the 5 responses based on <b>how creatively they answered the question,</b> <br>1 being most creative, and 5 being least.
+  <br><br>
+  </div>
+  <div id = "invPrompt">
+  The left column in the table below has responses to the following question:
+  <br><br>
+  <b>"Suppose you swallowed a pill that made you invisible. What would you do? Where would you go?"</b>
+  <br><br>
+  In the right column, please rank the 5 responses based on <b>how creatively they answered the question,</b> <br>1 being most creative, and 5 being least.
+  <br><br>
+  </div>
+
+  <div id = "areatable">
+    <table id="myTable">
+      <tr>
+        <td><div id = "ans1"></div></td>
+        <td><input type="number" id="rank1" name="rank1"
+          min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans2"></div></td>
+        <td><input type="number" id="rank2" name="rank2"
+       min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans3"></div></td>
+        <td><input type="number" id="rank3" name="rank3"
+        min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans4"></div></td>
+        <td><input type="number" id="rank4" name="rank4"
+       min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans5"></div></td>
+        <td><input type="number" id="rank5" name="rank5"
+       min="1" max="5"></td>
+      </tr>
+    </table>
+  </div>
+  <div id = "next" style = "text-align:center">
+        <center>
+          <div id = "error" class = "error initiallyHidden">
+            Please put different rankings from 1-5, for each response. 
+            <br>
+          </div>
+            <button type = "button" id = "next" value = "next"
+                    class = "btn btn-success btn-lg continue">
+                Next
+            </button>
+        </center>
+    </div><br>
+</div>

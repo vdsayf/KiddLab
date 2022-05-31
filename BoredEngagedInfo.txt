@@ -1,0 +1,78 @@
+This is the readme for BoredEngaged
+_________________________________________________________________
+Brief legend for FOLDERS/FILES in
+BoredEngaged
+
+-->BoredEngaged
+	config.txt = mTurk serever config file
+	SQLtoCSV.py = extracts data and reshapes into a csv
+	data.csv = the data from this experiment (IDs, demographics and responses)
+
+	-->templates
+		answerPage.html = the page where they will answer the two prompts (animal and invisible)
+		instructions.html = instructional page for experiment
+		interesting.html = page asking if they found the task interesting
+		screen1Tester.html = preemptively showing subject the questions they will answer later
+		screen2Vowels.html = Page for VOWEL TASK
+		screen2xo.html = Page for Xs & Os TASK
+		screen6Tester.html = Demographics page
+		videoScreen1.html = Page for SHORT VIDEO TASK
+		videoScreen2.html = Page for LONG VIDEO TASK
+
+	-->static
+		-->js
+			task.js = main experiment file
+______________________________________________________________________________________
+BoredEngaed Task.js functions explanation
+
+screenone:
+	shows screen1Tester.html
+	randomizes order of seeing animal or invisible prompt first
+	checks condition and sets task
+
+screenVideo1:
+	shows shorter video on videoScreen1.html 
+	cannot progress until video timer is up
+screenVideo2:
+	shows longer Video on videoScreen2.html
+	cannot progress until video timer is up
+
+screenInteresting:
+	shows interesting.html
+	asks if video was interesting
+
+screenVowels:
+	shows screen2Vowels.html
+	Must click on words to change their color to correspond to the given rubric
+	cannot progress until enough words are changed
+screenOX:
+	shows screen2xo.html
+	Must click on Xs and Os to change their color to correspond to the given rubric
+	cannot progress until enough letters are changed
+
+screenAnswer:
+	shows answerPage.html
+	gives prompt and space to respond
+
+screensix:
+	shows screen6Tester.html
+	asks for demographics
+
+psiTurk.recordTrialData variables:
+	wholeTime: time spent on whole experiment
+	condition: 0 is Short Video, 1 is Long video, 2 is Xs and Os, 3 is Counting Vowels
+	tasktime: time spent finishing the condition task
+	interest: whether video was interesting
+	enjoy: Whether they enjoyed the video
+	gender: gender
+	age: age
+	language: language spoken
+	languagetext: self-fill-in "other" language option
+	fluenttwo: If you are fluent in two languages; top 10 - 1 bottom
+	ladder: Socio-economic ranking on ladder; 
+	problem: Economic-problems answer; no problem 1 - 5 worst
+	race: race from given options
+	racetext: self-fill-in "other" race option
+	ethnicity: Hispanic or Not Hispanic
+	animalResponse: Describe an original animal - creative response
+	invisibleResponse: What would you do if Invisible? - creative response

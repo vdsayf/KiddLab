@@ -1,0 +1,46 @@
+<script>
+  var dingo = 0;
+  function vowelClick (eggo){
+    if (document.getElementById(eggo.id).style.color == "hotpink"){
+      document.getElementById(eggo.id).style.color = "yellow";
+    } else if (document.getElementById(eggo.id).style.color == "yellow") {
+      document.getElementById(eggo.id).style.color = "turquoise";
+    } else if (document.getElementById(eggo.id).style.color == "turquoise"){
+      document.getElementById(eggo.id).style.color = "hotpink";
+    } else {
+
+      dingo++;
+      if (dingo >= 248) {
+        document.getElementById("next").style.display = "initial";
+      }
+      document.getElementById(eggo.id).style.color = "hotpink";
+    }
+  }
+</script>
+<div align = "center">
+  <br>
+  <b> Please click the words in bottom paragraph to change their color to correspond with the following key:</b><br>
+  <br>
+  <font color="hotpink">Pink </font>means the word has 1 vowel.
+  <br>
+  <font color="yellow">Yellow </font>means the word has 2 vowels.
+  <br>
+  <font color="turquoise">Turquoise </font>means the word has 3+ vowels.
+  <br>
+  <br>
+  <b>
+  <div id = "wordpuzzle" style = "display: inline-block; text-align: left;">
+    
+  </div>
+  </b>
+  <br>
+  <br>
+  <div id = "next" style = "text-align:center">
+        <center>
+            <button type = "button" id = "next" value = "next"
+                    class = "btn btn-success btn-lg continue">
+                Next
+            </button>
+        </center>
+    </div>
+</div>

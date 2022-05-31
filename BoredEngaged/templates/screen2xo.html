@@ -1,0 +1,36 @@
+<script>
+  var dingo = 0;
+  function XOclick (eggo){
+    if (document.getElementById(eggo.id).style.backgroundColor == "red"){
+      document.getElementById(eggo.id).style.backgroundColor = "blue";
+    } else if (document.getElementById(eggo.id).style.backgroundColor == "blue") {
+      document.getElementById(eggo.id).style.backgroundColor = "red";
+    } else {
+      dingo++;
+      if (dingo == 250) {
+        document.getElementById("next").style.display = "initial";
+      }
+      document.getElementById(eggo.id).style.backgroundColor = "red";
+    }
+  }
+</script>
+<div align = "center">
+  <br>
+  <b> Please click the following Xs and Os so that<b><br>
+  <br>
+  The Xs are <font color="red">Red</font>
+  <br>
+  and the Os are <font color="blue">Blue</font>
+  <div id = "xopuzzle">
+    
+  </div>
+  <br>
+  <div id = "next" style = "text-align:center">
+        <center>
+            <button type = "button" id = "next" value = "next"
+                    class = "btn btn-success btn-lg continue">
+                Next
+            </button>
+        </center>
+    </div>
+</div>

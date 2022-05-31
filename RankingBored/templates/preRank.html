@@ -1,0 +1,54 @@
+<div align = "center">
+  <br>
+  <br>
+  <div id = "aniPrompt">
+  First let's practice! Below are some sample answers to the question: 
+  <br> <br>
+  <b>"Imagine an animal that doesn't exist, that no one else has ever imagined before. What does the animal look like?"</b>
+  <br><br>
+  In the right column, please rank the 5 answers based on how creatively they answer the question, <br>1 being most creative, and 5 being least.
+  <br><br>
+  </div>
+
+  <div id = "areatable">
+    <table id="myTable">
+      <tr>
+        <td><div id = "ans1"></div></td>
+        <td><input type="number" id="rank1" name="rank1"
+          min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans2"></div></td>
+        <td><input type="number" id="rank2" name="rank2"
+       min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans3"></div></td>
+        <td><input type="number" id="rank3" name="rank3"
+        min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans4"></div></td>
+        <td><input type="number" id="rank4" name="rank4"
+        min="1" max="5"></td>
+      </tr>
+      <tr>
+        <td><div id = "ans5"></div></td>
+        <td><input type="number" id="rank5" name="rank5"
+        min="1" max="5"></td>
+      </tr>
+    </table>
+  </div>
+  <div id = "next" style = "text-align:center">
+        <center>
+          <div id = "error" class = "error initiallyHidden">
+            Please put rankings from 1-5, a different rank for each answer. 
+            <br>
+          </div>
+            <button type = "button" id = "next" value = "next"
+                    class = "btn btn-success btn-lg continue">
+                Next
+            </button>
+        </center>
+    </div><br>
+</div>

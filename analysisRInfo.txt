@@ -1,0 +1,38 @@
+readMe for
+analysis.R for RankingBored
+
+names(rankings)
+	names for the rankings
+	As you can see it gives 26 columns.
+	First column is ID and condition is missing.
+	Please read dataCsvInfo
+	For new format replace the 10 columns "rateAni" and "rateInv" with 5 columns of "rate"
+	The condition should show which answers were being rated.
+
+rankings <- rankings[!(startsWith(as.character(rankings$ID), "debug")),]
+	Removes debug entries
+
+rankings <- rankings[!(startsWith(as.character(rankings$passTest), "false")),]
+ 	Checks passTest, if false, removes entries
+ 	This may need to be removed
+
+justRanks <- rankings[,c(12:26)]
+	gets columns 12-26
+	IDs and their ratings
+setOne - setFive
+	ID and received rating for single samples
+
+
+justRankFixed <- rbind(setOne,setTwo,setThree,setFour,setFive);
+	justRankFixed is every rating with ID 
+	fixedAnimal and fixedInvisible are subsets with ratings of animal and invisible responses, respectively.
+
+
+avgAniScore and avgInvScore
+	average score based on rating for every ID
+
+aniCount
+	each ID and the number of times its animal response was rated
+
+invCount
+	each ID and the number of times its invisible response was rated
